@@ -73,8 +73,21 @@
     overflow: hidden;
   }
   .hero .eyebrow {
-    font-size: 12px; letter-spacing: .22em; text-transform: uppercase;
-    color: var(--buoy); font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--buoy);
+    font-size: clamp(18px, 2vw, 21px);
+    font-weight: 700;
+    letter-spacing: -.02em;
+    line-height: 1.35;
+  }
+  .hero .eyebrow::before {
+    content: "";
+    flex: 0 0 4px;
+    height: 1.25em;
+    border-radius: 4px;
+    background: var(--buoy);
   }
   .hero h1 {
     margin: 18px 0 0;
