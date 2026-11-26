@@ -73,22 +73,16 @@
     overflow: hidden;
   }
   .hero .eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
+    display: inline-block;
+    padding-left: 14px;
+    border-left: 4px solid var(--buoy);
     color: var(--buoy);
     font-size: clamp(18px, 2vw, 21px);
     font-weight: 700;
     letter-spacing: -.02em;
     line-height: 1.35;
   }
-  .hero .eyebrow::before {
-    content: "";
-    flex: 0 0 4px;
-    height: 1.25em;
-    border-radius: 4px;
-    background: var(--buoy);
-  }
+  .hero .eyebrow span { white-space: nowrap; }
   .hero h1 {
     margin: 18px 0 0;
     font-size: clamp(54px, 8.5vw, 92px);
@@ -278,7 +272,7 @@
 
 <header class="hero">
   <div class="wrap">
-    <div class="eyebrow">VC 재무데이터 관리 프로젝트</div>
+    <div class="eyebrow">VC 재무데이터 관리 <span>프로젝트</span></div>
     <h1>KV <span class="thin">OCEAN</span></h1>
     <p class="thesis">
       피투자사 분기 재무제표를 <strong>OCR 검증 → 누적 → 지표 산출 → 구글시트 동기화</strong>까지
